@@ -31,9 +31,11 @@ public class MainActivity extends AppCompatActivity {
         eDesc = findViewById(R.id.edDesc);
         eName = findViewById(R.id.edName);
         db = App.getInstance().getDatabase();
-        if (db.getContactDao().getAll().isEmpty()) {
+        if (db.getContactDao().getAll().isEmpty())
+        {
             contactList = new ArrayList<>();
-        } else {
+        }
+        else {
             contactList = db.getContactDao().getAll();
         }
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.ContactL);
